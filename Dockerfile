@@ -1,6 +1,6 @@
-FROM sdhibit/rpi-raspbian:jessie
+FROM debian:jessie
 
-MAINTAINER Simon Chuang "simon.s.chuang@gmail.com"
+MAINTAINER "azcoigreach@gmail.com
 
 RUN apt-get update --fix-missing && apt-get install -y \
     hostapd \
@@ -8,7 +8,7 @@ RUN apt-get update --fix-missing && apt-get install -y \
     net-tools \
     iptables \
     dnsmasq \
-    vim \
+    nano \
  && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ADD hostapd.conf /etc/hostapd/hostapd.conf
